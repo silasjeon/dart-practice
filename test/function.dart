@@ -88,4 +88,17 @@ void main() {
     assert(add2(3) == 5);
     assert(add4(3) == 7);
   });
+
+  test('every function has return value', () {
+    func() {
+
+    };
+    expect(func(), null);
+
+    void voidFunc() {
+
+    }
+
+    // expect(voidFunc(), null);  Analyzer prevents to use void result
+  });
 }
